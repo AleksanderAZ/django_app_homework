@@ -1,0 +1,11 @@
+<a href="{% url 'task_create' %}">+ Add task</a>
+<ul>
+    {% for task in tasks %}
+        <li>
+            {{ task.title }} - {% if task.completed %} Done {% else %} In Progres {% endif %}
+            <a href="{% url 'task_delete'  task.id %}"> Delete</a>
+        </li>
+    {% empty %}
+        <li>No tasks</li>
+    {% endfor %}    
+</ul>
