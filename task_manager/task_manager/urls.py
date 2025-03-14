@@ -24,4 +24,6 @@ urlpatterns = [
     path("tasks/", include('tasks.urls')),
     path("accounts/login", auth_views.LoginView.as_view(), name='login'),
     path("accounts/logout", auth_views.LoginView.as_view(), name='logout'),
+    path("courses_app/", include('courses_app.urls')),
+    path("members_app/", include('members_app.urls')),
 ]
